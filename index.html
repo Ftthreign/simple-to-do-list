@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do-List Application</title>
+    <style>
+      body {
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        position: relative;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      .container {
+        padding: 20px;
+        background-color: grey;
+        margin: 50px auto;
+        width: 60%;
+        text-align: center;
+      }
+
+      .itemList {
+        list-style: none;
+      }
+
+      .completed {
+        font-style: italic;
+        text-decoration: line-through;
+      }
+
+      .input-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .input-button > #inputItem,
+      .input-button > #inputItem:focus {
+        font-size: 1.25rem;
+        padding: 10px;
+        outline: none;
+        border: none;
+        width: 60%;
+        height: 2rem;
+        border-radius: 30px;
+      }
+
+      #addButton {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        outline: none;
+        border: none;
+      }
+
+      #addButton:hover {
+        transform: translate(2px, 2px);
+        background-color: aquamarine;
+      }
+
+      button {
+        width: 100px;
+      }
+
+      ul {
+        list-style: none;
+        font-size: 1.5rem;
+      }
+
+      #isFill {
+        font-size: 1rem;
+      }
+
+      .footer {
+        text-align: center;
+
+        position: fixed;
+        bottom: 0;
+        background-color: darkblue;
+        width: 100%;
+        height: 50px;
+        color: white;
+        overflow-x: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>TO DO LIST APPLICATION</h2>
+      <div id="form">
+        <div class="input-container">
+          <div class="input-button">
+            <input type="text" id="inputItem" />
+            <button id="addButton">&plus;</button>
+          </div>
+          <ul id="taskList"></ul>
+          <p id="isFill"></p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>Make with Freaking Simple DOM Manipulation</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
